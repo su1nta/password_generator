@@ -2,6 +2,8 @@
 
 A simple, fast password generator built with React + Vite, styled with Tailwind CSS v4 and DaisyUI.
 
+![UI](./public/password-gen.png)
+
 ## Features
 
 - Generate random passwords instantly
