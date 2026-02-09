@@ -1,6 +1,7 @@
 # Password Generator
 
 A simple, fast password generator built with React + Vite, styled with Tailwind CSS v4 and DaisyUI.
+This project was made for implementation of several react hooks (e.g. useState, useEffect, useCallback and useRef);
 
 ![UI](./public/password-gen.png)
 

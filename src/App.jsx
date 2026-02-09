@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useState, useRef } from "react";
 import ReturnLogo from "./assets/return.svg";
 import "./App.css";
 
@@ -8,6 +8,8 @@ function App() {
     const [numberAllowed, setNumberAllowed] = useState(false);
     const [charAllowed, setCharAllowed] = useState(false);
     const [isCopied, setIsCopied] = useState(false);
+
+    const passwordRef = useRef(null);
 
     const generatePassword = useCallback(() => {
         let pass = "";
@@ -21,8 +23,10 @@ function App() {
         }
         setPassword(pass);
     }, [length, numberAllowed, charAllowed, setPassword]);
+
     const copyPasswordToClipboard = useCallback(() => {
         window.navigator.clipboard.writeText(password);
+        passwordRef?.current.select();
         setIsCopied(true);
     }, [password]);
 
@@ -64,7 +68,7 @@ function App() {
                                 <input
                                     type="email"
                                     value={password}
-                                    required
+                                    ref={passwordRef}
                                     readOnly
                                 />
                             </label>
