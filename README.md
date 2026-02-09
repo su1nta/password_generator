@@ -1,16 +1,60 @@
-# React + Vite
+# Password Generator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple, fast password generator built with React + Vite, styled with Tailwind CSS v4 and DaisyUI.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Generate random passwords instantly
+- Length slider (8–100)
+- Toggle options for:
+    - Numbers (0–9)
+    - Special characters (e.g. `!@#$%^&*()_+-=[]{}|;:,.<>?`)
+- Copy-to-clipboard button
+- Regenerate button
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- Vite
+- Tailwind CSS v4 (via `@tailwindcss/vite`)
+- DaisyUI
+- ESLint
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Prerequisites
+
+- Node.js (recommended: latest LTS)
+
+### Install
+
+```bash
+npm install
+```
+
+### Run locally
+
+```bash
+npm run dev
+```
+
+Then open the URL shown in your terminal (usually `http://localhost:5173`).
+
+## Scripts
+
+- `npm run dev` — start the dev server
+- `npm run build` — build for production
+- `npm run preview` — preview the production build locally
+- `npm run lint` — run ESLint
+
+## Notes
+
+- Clipboard copy uses `navigator.clipboard`. This works on `https://` origins or `http://localhost`.
+- Theme/fonts are configured via Tailwind v4 + DaisyUI in [src/App.css](src/App.css).
+
+## Project Structure (high level)
+
+- [index.html](index.html) — app entry HTML
+- [src/main.jsx](src/main.jsx) — React bootstrap
+- [src/App.jsx](src/App.jsx) — password generator UI + logic
+- [src/App.css](src/App.css) — Tailwind/DaisyUI + font definitions
